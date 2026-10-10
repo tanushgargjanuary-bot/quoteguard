@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning QuoteGuard — Quote Cleaning Jobs That Actually Make Money</title>
+<meta name="description" content="A deterministic quoting and profit-management workbook for cleaning businesses. Price every job to a guaranteed margin, then check what you actually earned.">
+<style>
+  :root{
+    --ink:#14181f; --muted:#5b6472; --line:#e3e7ec; --bg:#ffffff;
+    --accent:#0f6b4f; --accent-dark:#0b4f3a; --warn:#8a3b12; --soft:#f5f7f9;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  h1{font-size:2.35rem;line-height:1.15;letter-spacing:-.02em;margin:0 0 18px}
+  h2{font-size:1.5rem;line-height:1.25;letter-spacing:-.01em;margin:0 0 14px}
+  h3{font-size:1.06rem;margin:0 0 6px}
+  p{margin:0 0 16px;color:#2b323c}
+  .lede{font-size:1.14rem;color:var(--muted);margin-bottom:26px}
+  .muted{color:var(--muted)}
+  .small{font-size:.86rem;line-height:1.55}
+  strong{font-weight:650}
+
+  header{padding:64px 0 48px}
+  .eyebrow{
+    font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px
+  }
+  .price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:22px 0 6px}
+  .price{font-size:2rem;font-weight:700;letter-spacing:-.02em}
+  .price-note{color:var(--muted);font-size:.92rem}
+
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:650;padding:15px 30px;border-radius:7px;border:0;cursor:pointer;
+    font-size:1.02rem
+  }
+  .btn:hover{background:var(--accent-dark)}
+  .btn-lg{padding:17px 38px;font-size:1.08rem}
+  .reassure{font-size:.86rem;color:var(--muted);margin-top:11px}
+
+  ul{margin:0 0 16px;padding-left:21px}
+  li{margin-bottom:9px;color:#2b323c}
+  ul.tight li{margin-bottom:5px}
+
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:9px;padding:20px 22px;margin-bottom:14px}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}}
+
+  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.87em}
+  .formula{background:#0f1720;color:#dbe6ef;border-radius:8px;padding:16px 18px;margin:0 0 14px;overflow-x:auto}
+  .formula div{margin:0 0 8px;white-space:nowrap}
+  .formula div:last-child{margin:0}
+  .formula .k{color:#7fd6b2}
+
+  details{border:1px solid var(--line);border-radius:8px;padding:14px 17px;margin-bottom:10px;background:#fff}
+  details[open]{background:var(--soft)}
+  summary{cursor:pointer;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+";display:inline-block;width:19px;color:var(--accent);font-weight:700}
+  details[open] summary::before{content:"\2212"}
+  details p{margin:12px 0 0;font-size:.95rem}
+
+  .notfor{background:#fdf6f0;border:1px solid #f0dcc9;border-radius:9px;padding:18px 21px}
+  .notfor h3{color:var(--warn)}
+
+  .cta-box{background:var(--soft);border:1px solid var(--line);border-radius:11px;padding:30px 28px;text-align:center}
+  .cta-box h2{margin-bottom:8px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 54px;color:var(--muted)}
+  footer a{color:var(--muted)}
+  .legal{margin-top:18px;font-size:.8rem;line-height:1.6}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     PADDLE CHECKOUT
+     Paste your Paddle checkout link between the quotes below.
+     Everything else on this page is ready to go live.
+     ============================================================ -->
+<script>window.PADDLE_CHECKOUT_URL = "";</script>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">For cleaning business owners</div>
+    <h1>Stop guessing what to charge. Price every job to a guaranteed margin.</h1>
+    <p class="lede">QuoteGuard is a spreadsheet system that turns your labor, supplies, travel, and overhead into a defensible price &mdash; then tells you whether the job actually paid the way you quoted it.</p>
+
+    <a class="btn btn-lg" data-checkout href="#">Get QuoteGuard &mdash; $47</a>
+    <div class="price-row" style="margin-top:26px">
+      <span class="price">$47</span>
+      <span class="price-note">one-time payment &middot; instant download &middot; yours to keep</span>
+    </div>
+    <p class="reassure">30-day refund, no questions asked.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>If you price by feel, you already know the problem</h2>
+    <p>Most cleaning businesses don&rsquo;t fail because they can&rsquo;t clean. They fail because they quoted a big house at a small-house price, absorbed a supply run they never billed for, and found out three weeks later that a full month of work cleared almost nothing.</p>
+    <p>QuoteGuard exists because &ldquo;it felt like a fair price&rdquo; is not a pricing method. It replaces that instinct with arithmetic you can defend to a customer and audit against your own bank account.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it actually does</h2>
+    <p class="muted">Five connected parts. You set it up once; every quote after that takes minutes.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Setup</h3>
+        <p class="small">Your business defaults in one place: labor rate per cleaner-hour, overhead, target margin, minimum job price, processing fee percentage.</p>
+      </div>
+      <div class="card">
+        <h3>2. Quote calculator</h3>
+        <p class="small">Enter square footage, crew size, hours, condition, and add-ons. It returns a price that hits your target margin &mdash; or your floor, whichever is higher.</p>
+      </div>
+      <div class="card">
+        <h3>3. Job records</h3>
+        <p class="small">Every quote is frozen as static values. Changing your labor rate next month does not silently rewrite what you quoted last month.</p>
+      </div>
+      <div class="card">
+        <h3>4. Job review</h3>
+        <p class="small">After the job, enter what you actually spent and earned. QuoteGuard shows the variance between quoted expectation and realized profit.</p>
+      </div>
+      <div class="card">
+        <h3>5. Client quote</h3>
+        <p class="small">A clean, printable page you hand or email to the customer. No raw numbers, no formulas, no apologies.</p>
+      </div>
+      <div class="card">
+        <h3>6. Scenario testing</h3>
+        <p class="small">Model what happens before you commit: heavier soil, an extra cleaner, a discount, a bigger add-on. See the margin move before you say yes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The math is the product</h2>
+    <p>There is no black box here. These are the actual formulas the workbook runs, so you can verify every number it gives you.</p>
+
+    <div class="formula">
+      <div><span class="k">Base direct cost</span> = (Cleaners &times; Hours &times; Condition multiplier &times; Labor rate) + Supplies + Travel + Overhead</div>
+      <div><span class="k">Base cleaning price</span> = MAX( Base direct cost &divide; (1 &minus; Processing fee % &minus; Target margin %), Minimum job price )</div>
+      <div><span class="k">Total customer quote</span> = Base cleaning price + Add-on revenue</div>
+      <div><span class="k">Expected profit</span> = Total quote &minus; Base direct cost &minus; Add-on direct cost &minus; (Total quote &times; Processing fee)</div>
+    </div>
+
+    <p>That third line is the one that matters. The price is <em>derived from</em> your costs and your target margin &mdash; it is never typed in by hand. And the fourth line is what most operators never calculate: what the job was <em>supposed</em> to make, so you can compare it to what it actually made.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Built-in guardrails</h2>
+    <ul class="tight">
+      <li><strong>Margin target enforced, not suggested.</strong> The price is solved from your costs and target margin, so you cannot accidentally quote below it.</li>
+      <li><strong>A hard price floor.</strong> No quote can come out below your minimum job price, no matter how the inputs look.</li>
+      <li><strong>Processing fees counted as a cost.</strong> Card fees are treated as a real expense, which most home-brew quote sheets ignore.</li>
+      <li><strong>History that cannot drift.</strong> Quotes are stored as frozen values, so your records stay true as your defaults change.</li>
+      <li><strong>Input validation.</strong> Condition multipliers and margins are bounded, so a typo fails loudly instead of producing a confident wrong price.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What you get</h2>
+    <ul class="tight">
+      <li>The <strong>QuoteGuard v2.1 workbook</strong> &mdash; the complete Excel file, formulas intact and editable.</li>
+      <li>A <strong>setup guide</strong> so you can configure your own rates, overhead, and margin target on day one.</li>
+      <li>A <strong>user guide</strong> covering the quote-to-review workflow end to end.</li>
+      <li>One-time download. No subscription, no account to maintain, no expiry.</li>
+    </ul>
+    <p class="small muted">Requires Microsoft Excel or a compatible spreadsheet application that supports formulas.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="notfor">
+      <h3>Who this is not for</h3>
+      <p class="small">Being straight with you saves us both time. QuoteGuard is probably not a fit if you run a single client on a fixed weekly retainer, if you price strictly by the hour with no materials involved, or if you have never once wondered what your actual margin on a job was. It is built for operators who quote variable jobs &mdash; varying square footage, crew, and condition &mdash; and who need those quotes to be profitable on purpose rather than by luck.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+
+    <details>
+      <summary>Do I need to know Excel formulas?</summary>
+      <p>No. You type into labeled input cells and read the output. The formulas are already built and are yours to inspect or change if you ever want to.</p>
+    </details>
+    <details>
+      <summary>Will it work in Google Sheets or LibreOffice?</summary>
+      <p>It is built and tested as an Excel workbook. Google Sheets and LibreOffice may open it, but formula behavior can differ between applications and is not guaranteed. Use Excel for reliable results.</p>
+    </details>
+    <details>
+      <summary>Can I use it for multiple crews or locations?</summary>
+      <p>Setup holds one set of business defaults at a time, which is the right model for a single operation. If you run genuinely separate businesses, you can save a copy per operation and configure each independently.</p>
+    </details>
+    <details>
+      <summary>What if it doesn&rsquo;t work for my business?</summary>
+      <p>Email us within 30 days and we&rsquo;ll refund you in full. You don&rsquo;t need to explain why.</p>
+    </details>
+    <details>
+      <summary>Is this a subscription?</summary>
+      <p>No. One payment, one download, and the file is yours permanently.</p>
+    </details>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>Price your next job on purpose</h2>
+      <p class="muted">$47, once. Instant download. 30-day refund.</p>
+      <a class="btn btn-lg" data-checkout href="#">Get QuoteGuard &mdash; $47</a>
+      <p class="reassure">Secure checkout &middot; instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="small">
+      <strong>Contact &amp; support:</strong>
+      <a href="mailto:tanushgargjanuary@gmail.com">tanushgargjanuary@gmail.com</a>
+    </p>
+
+    <div class="legal">
+      <p><strong>Refund policy.</strong> If QuoteGuard isn&rsquo;t right for your business, email us within 30 days of purchase and we&rsquo;ll refund you in full. No questions asked.</p>
+
+      <p><strong>Terms &amp; conditions.</strong> Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns. Cleaning QuoteGuard is provided as-is, as a spreadsheet tool to support your own pricing decisions. Pricing decisions, customer agreements, and the profitability of any job remain your responsibility. You may not resell or redistribute the workbook.</p>
+
+      <p class="muted" style="margin-top:14px">&copy; <span id="yr"></span> Cleaning QuoteGuard. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var url = window.PADDLE_CHECKOUT_URL;
+  if (url) {
+    document.querySelectorAll('[data-checkout]').forEach(function (a) {
+      a.href = url;
+    });
+  } else {
+    document.querySelectorAll('[data-checkout]').forEach(function (a) {
+      a.href = '#';
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('Checkout is not connected yet.');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
