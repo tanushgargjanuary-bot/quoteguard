@@ -55,12 +55,6 @@
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:620px){.grid{grid-template-columns:1fr}}
 
-  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.87em}
-  .formula{background:#0f1720;color:#dbe6ef;border-radius:8px;padding:16px 18px;margin:0 0 14px;overflow-x:auto}
-  .formula div{margin:0 0 8px;white-space:nowrap}
-  .formula div:last-child{margin:0}
-  .formula .k{color:#7fd6b2}
-
   details{border:1px solid var(--line);border-radius:8px;padding:14px 17px;margin-bottom:10px;background:#fff}
   details[open]{background:var(--soft)}
   summary{cursor:pointer;font-weight:600;list-style:none}
@@ -149,16 +143,28 @@
 <section>
   <div class="wrap">
     <h2>The math is the product</h2>
-    <p>There is no black box here. These are the actual formulas the workbook runs, so you can verify every number it gives you.</p>
+    <p>QuoteGuard is not a calculator with a price field. The price is <em>solved</em> &mdash; derived from your costs and the margin you need to hit, then checked against a floor you set. You never type a price by hand, which is the whole point.</p>
 
-    <div class="formula">
-      <div><span class="k">Base direct cost</span> = (Cleaners &times; Hours &times; Condition multiplier &times; Labor rate) + Supplies + Travel + Overhead</div>
-      <div><span class="k">Base cleaning price</span> = MAX( Base direct cost &divide; (1 &minus; Processing fee % &minus; Target margin %), Minimum job price )</div>
-      <div><span class="k">Total customer quote</span> = Base cleaning price + Add-on revenue</div>
-      <div><span class="k">Expected profit</span> = Total quote &minus; Base direct cost &minus; Add-on direct cost &minus; (Total quote &times; Processing fee)</div>
+    <div class="grid">
+      <div class="card">
+        <h3>Every real cost gets counted</h3>
+        <p class="small">Labor scaled by crew size, hours, and a soil-condition multiplier. Supplies. Travel. Overhead. Add-on materials. Card processing fees treated as a genuine expense, not an afterthought.</p>
+      </div>
+      <div class="card">
+        <h3>The margin is enforced</h3>
+        <p class="small">The quote is built backward from the margin you need, so the number that comes out is one that actually pays. If the inputs can&rsquo;t support your floor, you find out before you commit &mdash; not after.</p>
+      </div>
+      <div class="card">
+        <h3>Nothing is left to memory</h3>
+        <p class="small">Each quote is stored as a fixed record, so your pricing history stays honest even after you change your rates. Adjusting next quarter&rsquo;s labor rate cannot quietly rewrite what you charged last quarter.</p>
+      </div>
+      <div class="card">
+        <h3>You find out what it really made</h3>
+        <p class="small">Enter actual costs and revenue after the job, and QuoteGuard shows the gap between the margin you quoted and the margin you kept. That gap is where cleaning businesses quietly bleed.</p>
+      </div>
     </div>
 
-    <p>That third line is the one that matters. The price is <em>derived from</em> your costs and your target margin &mdash; it is never typed in by hand. And the fourth line is what most operators never calculate: what the job was <em>supposed</em> to make, so you can compare it to what it actually made.</p>
+    <p>That last part is what most operators never do at all. Quoting profitably gets you half way; knowing which jobs failed to deliver it is what stops you repeating the mistake.</p>
   </div>
 </section>
 
